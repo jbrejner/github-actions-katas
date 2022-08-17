@@ -37,7 +37,7 @@ jobs:
     env:
       docker_username: ${{ secrets.DOCKER_USER }}
       docker_password: ${{ secrets.DOCKER_PASSWORD }}
-      GIT_COMMIT: ${{ env.GITHUB_SHA }}
+      GIT_COMMIT: ${{ github.sha }}
     steps:
       - name: build docker
         run: chmod +x ci/build-docker.sh && ci/build-docker.sh
