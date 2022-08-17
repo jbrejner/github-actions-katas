@@ -73,7 +73,7 @@ jobs:
           name: code
           path: .
       - name: Install Docker
-        script: | 
+        run: | 
           apt-get update
           apt-get install docker-compose -y
       - name: Execute component test
