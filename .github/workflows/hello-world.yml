@@ -73,7 +73,9 @@ jobs:
           name: code
           path: .
       - name: Install Docker
-        run: sudo apt install docker-compose -y
+        run: | 
+          sudo apt-get update
+          sudo apt-get install docker-compose -y
       - name: Execute component test
         run: chmod +x ci/component-test.sh && GIT_COMMIT="GA-$GITHUB_SHA" && ci/component-test.sh
   
