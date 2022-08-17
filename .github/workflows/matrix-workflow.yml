@@ -27,7 +27,7 @@ jobs:
       needs: Clone-down
       strategy:
         matrix:
-          container: ["gradle:6-jdk8", "gradle:6-jdk11", "gradle:6-jdk17"]
+          container: ["gradle:6-jdk8", "gradle:6-jdk11"] # , "gradle:6-jdk17"]
       container:
         image: ${{ matrix.container }}
       steps:
