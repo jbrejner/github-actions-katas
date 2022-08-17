@@ -9,6 +9,7 @@ jobs:
         uses: actions/checkout@v2
   Build:
       needs: Clone-Down
+      steps:
       - name: Build
         run: ./ci/build-app.sh
       - name: Test
