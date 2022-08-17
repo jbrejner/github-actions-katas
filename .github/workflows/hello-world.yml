@@ -39,6 +39,11 @@ jobs:
       docker_password: ${{ secrets.DOCKER_PASSWORD }}
       GIT_COMMIT: ${{ github.sha }}
     steps:
+      - name: Download code
+        uses: actions/download-artifact@v1
+        with:
+          name: code
+          path: .
       - name: build docker
         run: chmod +x ci/build-docker.sh && ci/build-docker.sh
       - name: push docker
