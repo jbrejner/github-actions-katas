@@ -21,4 +21,6 @@ jobs:
           # Comma separated list of packages that are to be available in your shell
           packages: # default is bash
           # The actual script to execute in the shell
-          script: ls -al && ls -al app/ 
+          script: |
+            ls -al
+            ls -al app/ 
